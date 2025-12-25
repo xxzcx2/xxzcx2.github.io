@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 - 章颖个人网站</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .about-avatar {
+      text-align: center;
+    }
+    .about-avatar img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .about-info h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    .about-info p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .about-info .info-list {
+      margin: 30px 0;
+    }
+    .about-info .info-list li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+    .about-info .info-list li span {
+      font-weight: bold;
+      min-width: 80px;
+      color: #2c3e50;
+    }
+    .experience {
+      margin-top: 60px;
+    }
+    .experience-item {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .experience-item h4 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .experience-item .time {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .experience-item p {
+      color: #666;
+      line-height: 1.7;
+    }
+    @media (max-width: 768px) {
+      .about-container {
+        grid-template-columns: 1fr;
+      }
+      .about-avatar img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">章颖个人网站</div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html" class="active">关于我</a></li>
+        <li><a href="works.html">作品展示</a></li>
+        <li><a href="blog.html">博客文章</a></li>
+        <li><a href="skills.html">技能专长</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container content">
+    <h2 class="page-title">关于我</h2>
+    <div class="about-container">
+      <div class="about-avatar">
+        <img src="images/avatar.jpg" alt="个人头像">
+      </div>
+      <div class="about-info">
+        <h3>个人简介</h3>
+        <p>
+          大家好！我是章颖，一名来自荆州的帅哥。拥有3年新媒体领域的从业经验，擅长策划、剪辑、编辑技能，始终保持对新媒体领域的热爱和学习热情。我的核心价值观是「用心做好每一件事」，希望通过我的作品和分享，为更多人带来价值。
+        </p>
+        <ul class="info-list">
+          <li><span>姓名：</span>章颖</li>
+          <li><span>年龄：</span>20岁</li>
+          <li><span>职业：</span>学生</li>
+          <li><span>所在地：</span>湖北</li>
+          <li><span>邮箱：</span>2676587652@qq.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="experience">
+      <h3 style="font-size:24px; color:#2c3e50; margin-bottom:20px;">我的经历</h3>
+      <div class="experience-item">
+        <h4>新媒体公司 - 新媒体运营职位</h4>
+        <div class="time">2024年9月 -2025年6月</div>
+        <p>
+          负责网页制作项目的所有工作，主导了网页功能的设计，优化了制作流程，最终实现此成果。 
+       </p>
+      </div>
+      <div class="experience-item">
+        <h4>湖北科技学院 - 网络与新媒体专业</h4>
+        <div class="time">2023年9月 - 2027年9月</div>
+        <p>
+          主修XX专业，系统学习了新闻学、媒介融合、网页设计课程，获得一等奖学金/湖北省新闻技能传播实践大赛竞赛奖项。在校期间参与了知行工作室校园项目，积累了策划方面的实践经验。
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-text">© 2025 章颖个人网站 - 保留所有权利</div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.textContent = navMenu.classList.contains('active') ? '×' : '☰';
+    });
+  </script>
+</body>
+</html>

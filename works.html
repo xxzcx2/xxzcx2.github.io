@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>作品展示 - 章颖个人网站</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .works-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+    .work-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .work-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    .work-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .work-info {
+      padding: 25px;
+    }
+    .work-info h3 {
+      font-size: 20px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .work-info .work-tag {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #f0f0f0;
+      color: #666;
+      font-size: 12px;
+      border-radius: 3px;
+      margin-bottom: 15px;
+    }
+    .work-info p {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .work-link {
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1px solid #2c3e50;
+      color: #2c3e50;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .work-link:hover {
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .works-container {
+        grid-template-columns: 1fr;
+      }
+      .work-img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">章颖个人网站</div>
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于我</a></li>
+        <li><a href="works.html" class="active">作品展示</a></li>
+        <li><a href="blog.html">博客文章</a></li>
+        <li><a href="skills.html">技能专长</a></li>
+        <li><a href="contact.html">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container content">
+    <h2 class="page-title">作品展示</h2>
+    <div class="works-container">
+      <div class="work-card">
+        <img src="images/work1.jpg" alt="作品1封面" class="work-img">
+        <div class="work-info">
+          <h3>BOOK思议</h3>
+          <span class="work-tag">UI设计</span>
+          <p>
+            该作品为BOOK思议品牌设计的移动端APP界面，主打简洁、易用的交互体验，采用简约设计风格，优化了核心功能的操作流程，提升用户使用效率。
+          </p>
+          <a href="#" class="work-link">查看详情</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="images/work2.jpg" alt="作品2封面" class="work-img">
+        <div class="work-info">
+          <h3>产品研发</h3>
+          <span class="work-tag">前端开发</span>
+          <p>
+            基于HTML+CSS+JavaScript开发的响应式企业官网，适配PC/手机/平板，集成了多种功能，加载速度优化至12秒。
+          </p>
+          <a href="#" class="work-link">查看详情</a>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="images/work3.jpg" alt="作品3封面" class="work-img">
+        <div class="work-info">
+          <h3>短视频创作</h3>
+          <span class="work-tag">短视频创作</span>
+          <p>
+            围绕阅读主题创作的短视频内容，采用现代拍摄手法和剪辑风格，全网播放量50万，获得抖音精选平台的优质内容推荐。
+          </p>
+          <a href="#" class="work-link">查看详情</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-text">© 2025 章颖个人网站 - 保留所有权利</div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      menuToggle.textContent = navMenu.classList.contains('active') ? '×' : '☰';
+    });
+  </script>
+</body>
+</html>
